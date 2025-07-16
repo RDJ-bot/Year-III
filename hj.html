@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Inventory Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+    header {
+      background-color: #1e293b;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3b82f6;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background-color: #1e293b;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    .inventory {
+      margin-bottom: 1rem;
+    }
+    .status-box {
+      padding: 0.5rem;
+      border-radius: 6px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .green {
+      background-color: #22c55e; /* green */
+      color: #fff;
+    }
+    .yellow {
+      background-color: #facc15; /* yellow */
+      color: #000;
+    }
+    .red {
+      background-color: #ef4444; /* red */
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Smart Inventory Store</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Inventory</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Available Products</h1>
+    <div class="products">
+
+      <!-- Nuts (250) -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Nuts" alt="Nuts">
+        <h3>Nuts</h3>
+        <div class="inventory">Available: <strong>250 packs</strong></div>
+        <div class="status-box green">In Stock</div>
+      </div>
+
+      <!-- Bolts (8) -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Bolts" alt="Bolts">
+        <h3>Bolts</h3>
+        <div class="inventory">Available: <strong>8 packs</strong></div>
+        <div class="status-box yellow">Low Stock</div>
+      </div>
+
+      <!-- Electrodes (0) -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Electrodes" alt="Welding Electrodes">
+        <h3>Welding Electrodes</h3>
+        <div class="inventory">Available: <strong>0 boxes</strong></div>
+        <div class="status-box red">Out of Stock</div>
+      </div>
+
+      <!-- Gloves (100) -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Gloves" alt="Gloves">
+        <h3>Safety Gloves</h3>
+        <div class="inventory">Available: <strong>100 pairs</strong></div>
+        <div class="status-box green">In Stock</div>
+      </div>
+
+      <!-- Goggles (5) -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Goggles" alt="Goggles">
+        <h3>Protective Goggles</h3>
+        <div class="inventory">Available: <strong>5 pieces</strong></div>
+        <div class="status-box yellow">Low Stock</div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
